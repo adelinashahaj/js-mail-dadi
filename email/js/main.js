@@ -4,4 +4,23 @@
 //stampa un messaggio appropriato sull’esito del controllo.
 
 
-let userdom = parseInt(prompt("Dimmi la tua email"));
+let userDom = prompt("Dimmi la tua email");
+const emailDom = ["myname@email.com", "pinco@pallino.com", "pippo@email.com"];
+let answer = document.querySelector("#answer");
+
+ let result = false;
+
+ for (let i = 0; i < emailDom.length; i++) {
+   if (userDom === emailDom[i]) {
+     result = true;
+   }
+ }
+
+ if (result == true) {
+   answer.append("L'indirizzo email è corretto.");
+ } else {
+   answer.append(
+     "l'indirizzo email non corrisponde a nessun utente."
+  );
+ }
+ 
